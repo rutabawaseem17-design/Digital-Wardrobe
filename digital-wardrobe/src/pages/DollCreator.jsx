@@ -8,7 +8,7 @@ import {
 import { Link } from "react-router-dom";
 
 import CustomDoll from "../components/CustomDoll";
-import "../styles/dollCreator.css";
+import "../styles/DollCreator.css";
 
 
 const options = {
