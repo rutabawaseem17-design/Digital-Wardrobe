@@ -1,0 +1,483 @@
+/* ==================================================
+   DRESS ME PAGE
+================================================== */
+
+.dress-me-page {
+    min-height: 100vh;
+    background: #f9f7ef;
+    color: #4a4038;
+    padding: 40px 6%;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.dress-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.dress-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    text-decoration: none;
+    color: #4a4038;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dress-back:hover {
+    opacity: 0.65;
+}
+
+.dress-title {
+    text-align: center;
+}
+
+.dress-title > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #91a589;
+}
+
+.dress-title h1 {
+    margin: 8px 0 6px;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1;
+    font-weight: 700;
+}
+
+.dress-title h1 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.dress-title p {
+    margin: 0;
+    color: #8d8178;
+    font-size: 14px;
+}
+
+.dress-sparkle {
+    justify-self: end;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f6dde2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==================================================
+   MAIN LAYOUT
+================================================== */
+
+.dress-layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(360px, 0.9fr) minmax(420px, 1.1fr);
+    gap: 30px;
+}
+
+
+/* ==================================================
+   DOLL PREVIEW
+================================================== */
+
+.dress-preview {
+    min-height: 650px;
+    background: #fff9f1;
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 45px rgba(74, 64, 56, 0.06);
+}
+
+.dress-preview::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #f6dde2;
+    opacity: 0.38;
+    top: -110px;
+    right: -100px;
+}
+
+.dress-preview::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #c9d8c0;
+    opacity: 0.3;
+    bottom: -110px;
+    left: -80px;
+}
+
+.dress-preview-label {
+    position: absolute;
+    top: 25px;
+    left: 28px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #91a589;
+}
+
+.dress-doll {
+    width: 300px;
+    position: relative;
+    z-index: 2;
+}
+
+.dress-doll .custom-doll {
+    width: 100%;
+}
+
+.dress-doll .custom-doll-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dress-preview-info {
+    position: relative;
+    z-index: 2;
+    margin-top: -8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dress-preview-info strong {
+    font-size: 17px;
+}
+
+.dress-preview-info span {
+    font-size: 12px;
+    color: #9a8e85;
+}
+
+
+/* ==================================================
+   WARDROBE PANEL
+================================================== */
+
+.wardrobe-panel {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 35px;
+    box-shadow: 0 15px 45px rgba(74, 64, 56, 0.06);
+}
+
+.wardrobe-heading > span {
+    color: #91a589;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.wardrobe-heading h2 {
+    margin: 7px 0 25px;
+    font-size: 32px;
+}
+
+.wardrobe-heading h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+
+/* ==================================================
+   CATEGORIES
+================================================== */
+
+.wardrobe-categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #eee7df;
+}
+
+.wardrobe-categories button {
+    border: 1px solid #e8dfd7;
+    background: #fff;
+    color: #776c64;
+    border-radius: 50px;
+    padding: 9px 13px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.wardrobe-categories button:hover {
+    border-color: #c9d8c0;
+}
+
+.wardrobe-categories button.active {
+    background: #91a589;
+    border-color: #91a589;
+    color: #fff;
+}
+
+.wardrobe-categories button small {
+    margin-left: 5px;
+    opacity: 0.6;
+    font-size: 8px;
+}
+
+
+/* ==================================================
+   CLOTHING OPTIONS
+================================================== */
+
+.clothing-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.clothing-card {
+    border: 1px solid #eee7df;
+    background: #fff;
+    border-radius: 18px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s ease;
+}
+
+.clothing-card:hover {
+    transform: translateY(-2px);
+    border-color: #c9d8c0;
+}
+
+.clothing-card.selected {
+    border: 2px solid #91a589;
+    padding: 9px;
+}
+
+.clothing-preview {
+    height: 125px;
+    background: #f9f7ef;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.clothing-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 4px 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.clothing-name svg {
+    color: #91a589;
+}
+
+
+/* ==================================================
+   MINI CLOTHES
+================================================== */
+
+.mini-top {
+    width: 65px;
+    height: 85px;
+    border-radius: 16px 16px 10px 10px;
+    position: relative;
+}
+
+.mini-top::before,
+.mini-top::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 25px;
+    height: 48px;
+    border-radius: 12px;
+    background: inherit;
+}
+
+.mini-top::before {
+    left: -19px;
+    transform: rotate(18deg);
+}
+
+.mini-top::after {
+    right: -19px;
+    transform: rotate(-18deg);
+}
+
+.mini-oversized {
+    width: 75px;
+    height: 92px;
+    border-radius: 13px;
+}
+
+.mini-sweater {
+    width: 70px;
+    height: 88px;
+    border-radius: 18px 18px 10px 10px;
+}
+
+.mini-cardigan {
+    width: 68px;
+    height: 90px;
+    border-radius: 15px;
+    border: 4px solid #d3a984;
+}
+
+.mini-hoodie {
+    width: 72px;
+    height: 91px;
+    border-radius: 17px;
+}
+
+.mini-hoodie::before {
+    width: 35px;
+    height: 27px;
+    top: -8px;
+    left: 18px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+
+/* ==================================================
+   NONE
+================================================== */
+
+.none-symbol {
+    width: 48px;
+    height: 48px;
+    border: 1px dashed #cfc4bb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #a79b92;
+}
+
+
+/* ==================================================
+   COMING SOON
+================================================== */
+
+.coming-soon {
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.coming-soon > div {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #f6dde2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c98f9c;
+    margin-bottom: 15px;
+}
+
+.coming-soon h3 {
+    margin: 0 0 7px;
+    font-size: 19px;
+}
+
+.coming-soon p {
+    max-width: 260px;
+    margin: 0;
+    color: #9a8e85;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+
+    .dress-header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .dress-title {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-bottom: 25px;
+    }
+
+    .dress-back {
+        grid-row: 2;
+    }
+
+    .dress-sparkle {
+        grid-row: 2;
+    }
+
+    .dress-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dress-preview {
+        min-height: 580px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .dress-me-page {
+        padding: 25px 16px;
+    }
+
+    .wardrobe-panel {
+        padding: 22px;
+    }
+
+    .clothing-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dress-doll {
+        width: 260px;
+    }
+
+    .dress-preview {
+        min-height: 540px;
+    }
+}

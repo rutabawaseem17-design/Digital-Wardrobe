@@ -1,0 +1,904 @@
+/* =========================
+   DOLL CREATOR PAGE
+========================= */
+
+.doll-creator-page {
+    min-height: calc(100vh - 82px);
+    padding: 70px 7% 100px;
+    background: var(--cream);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.creator-header {
+    max-width: 1150px;
+    margin: 0 auto 45px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.creator-label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+.creator-header h1 {
+    margin-top: 9px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 68px);
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+.creator-header h1 em {
+    color: #b98d98;
+    font-style: italic;
+}
+
+.creator-header p {
+    max-width: 480px;
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.creator-skip {
+    padding: 11px 17px;
+
+    border: 1px solid var(--beige);
+    border-radius: 50px;
+
+    background: var(--white);
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.creator-skip:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MAIN CREATOR
+========================= */
+
+.doll-creator {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.95fr 1.05fr;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   DOLL PREVIEW
+========================= */
+
+.doll-preview-panel {
+    position: relative;
+
+    min-height: 610px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    transition:
+        background 0.3s ease;
+}
+
+.preview-label {
+    position: absolute;
+
+    top: 27px;
+    left: 30px;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: var(--muted);
+}
+
+
+/* =========================
+   DECORATIONS
+========================= */
+
+.preview-decoration {
+    position: absolute;
+
+    font-family: "Playfair Display", serif;
+
+    color: #b98d98;
+}
+
+.decoration-star {
+    top: 70px;
+    right: 55px;
+
+    font-size: 25px;
+
+    animation:
+        creatorFloat
+        3s
+        ease-in-out
+        infinite;
+}
+
+.decoration-heart {
+    bottom: 70px;
+    left: 55px;
+
+    font-size: 31px;
+
+    animation:
+        creatorFloat
+        3s
+        ease-in-out
+        infinite;
+
+    animation-delay: 0.7s;
+}
+
+@keyframes creatorFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            rotate(5deg);
+    }
+}
+
+
+/* =========================
+   CUSTOM DOLL
+========================= */
+
+.creator-doll {
+    position: absolute;
+
+    width: 300px;
+    height: 500px;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -47%);
+
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.custom-doll {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-doll-svg {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    overflow: visible;
+}
+
+.creator-doll.is-dragging {
+    cursor: grabbing !important;
+}
+
+.creator-doll .custom-doll {
+    pointer-events: none;
+}
+
+
+/* =========================
+   PREVIEW NAME
+========================= */
+
+.preview-name {
+    position: absolute;
+
+    bottom: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+.preview-name strong {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+.preview-name span {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.creator-controls {
+    padding: 32px;
+
+    border-radius: 32px;
+
+    background: var(--white);
+
+    border: 1px solid var(--beige);
+}
+
+.controls-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.controls-header > div > span {
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: var(--muted);
+}
+
+.controls-header h2 {
+    margin-top: 6px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 31px;
+
+    font-weight: 500;
+}
+
+.controls-header h2 em {
+    color: #b98d98;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+.reset-doll {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 9px 13px;
+
+    border: 1px solid var(--beige);
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TABS
+========================= */
+
+.creator-tabs {
+    margin-top: 28px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.creator-tabs button {
+    padding: 9px 13px;
+
+    border: 0;
+
+    border-radius: 50px;
+
+    background: var(--cream);
+
+    color: var(--muted);
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.creator-tabs button:hover {
+    transform: translateY(-1px);
+}
+
+.creator-tabs button.active {
+    background: var(--brown);
+
+    color: var(--white);
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.creator-options {
+    min-height: 300px;
+
+    margin-top: 18px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-content: start;
+
+    gap: 10px;
+}
+
+.creator-option {
+    min-height: 60px;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid var(--beige);
+
+    border-radius: 16px;
+
+    background: var(--cream);
+
+    color: var(--brown);
+
+    text-align: left;
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.creator-option:hover {
+    transform: translateY(-2px);
+
+    background: var(--white);
+}
+
+.creator-option.selected {
+    border-color: var(--brown);
+
+    background: var(--white);
+
+    box-shadow:
+        0 5px 15px
+        rgba(74, 64, 56, 0.07);
+}
+
+.option-color,
+.option-preview {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+}
+
+.option-color {
+    border:
+        2px solid
+        rgba(74, 64, 56, 0.08);
+}
+
+.option-preview {
+    background: var(--pink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 15px;
+}
+
+.creator-option > svg {
+    margin-left: auto;
+
+    color: #b98d98;
+}
+
+
+/* =========================
+   SAVE
+========================= */
+
+.creator-save-area {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        var(--beige);
+}
+
+.save-doll-button {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 0;
+
+    border-radius: 50px;
+
+    background: var(--brown);
+
+    color: var(--white);
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.save-doll-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 22px
+        rgba(74, 64, 56, 0.15);
+}
+
+.doll-save-message {
+    margin-top: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: var(--muted);
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   ROTATION HINT
+================================================== */
+
+.rotation-hint {
+    position: absolute;
+
+    left: 50%;
+    bottom: 74px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    color: var(--muted);
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    backdrop-filter: blur(8px);
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   ROTATION BUTTONS
+================================================== */
+
+.rotation-controls {
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 6px;
+
+    border: 1px solid
+        rgba(74, 64, 56, 0.08);
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 8px 25px
+        rgba(74, 64, 56, 0.08);
+}
+
+.rotation-controls button {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: var(--cream);
+
+    color: var(--brown);
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.rotation-controls button:hover {
+    background: var(--pink);
+
+    transform: scale(1.05);
+}
+
+.rotation-controls span {
+    min-width: 42px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   HAIR OPTIONS
+================================================== */
+
+.creator-options {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+.creator-option {
+    min-height: 60px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .doll-creator {
+        grid-template-columns: 1fr;
+    }
+
+    .doll-preview-panel {
+        min-height: 560px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .doll-creator-page {
+        padding:
+            55px
+            5%
+            80px;
+    }
+
+    .creator-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .creator-skip {
+        display: none;
+    }
+
+    .creator-controls {
+        padding: 24px;
+    }
+
+    .creator-options {
+        grid-template-columns: 1fr;
+    }
+
+    /* Preview gets extra vertical breathing room */
+    .doll-preview-panel {
+        min-height: 530px;
+    }
+
+    /*
+       Move the doll slightly upward
+       and make it a little smaller so
+       the shoes don't reach the name.
+    */
+    .creator-doll {
+        width: 300px;
+        height: 500px;
+
+        top: 44%;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.78);
+    }
+
+    /*
+       Keep the name clearly separated
+       from the doll's shoes.
+    */
+    .preview-name {
+        bottom: 18px;
+
+        padding-top: 8px;
+
+        background: transparent;
+
+        z-index: 10;
+    }
+
+    .preview-name strong {
+        font-size: 17px;
+    }
+
+    .preview-name span {
+        margin-top: 4px;
+
+        font-size: 9px;
+    }
+
+    .preview-label {
+        top: 22px;
+        left: 22px;
+    }
+
+    .decoration-star {
+        top: 55px;
+        right: 30px;
+    }
+
+    .decoration-heart {
+        bottom: 70px;
+        left: 28px;
+    }
+
+    .rotation-hint {
+        bottom: 70px;
+    }
+
+    .rotation-controls {
+        bottom: 27px;
+    }
+}
+
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 400px) {
+
+    .doll-preview-panel {
+        min-height: 510px;
+    }
+
+    .creator-doll {
+        top: 43%;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.72);
+    }
+
+    .preview-name {
+        bottom: 16px;
+    }
+
+    .preview-name strong {
+        font-size: 16px;
+    }
+
+    .preview-name span {
+        font-size: 8px;
+    }
+
+    .decoration-star {
+        right: 22px;
+    }
+
+    .decoration-heart {
+        left: 20px;
+    }
+}

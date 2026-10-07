@@ -1,0 +1,597 @@
+/* =========================
+   SAVED LOOKS PAGE
+========================= */
+
+.saved-looks-page {
+    min-height: calc(100vh - 82px);
+
+    padding: 75px 7% 100px;
+
+    background: var(--cream);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.saved-looks-header {
+    max-width: 1150px;
+
+    margin: 0 auto 45px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.saved-label {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: var(--muted);
+}
+
+.saved-looks-header h1 {
+    margin-top: 9px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+.saved-looks-header h1 em {
+    color: #b98d98;
+
+    font-style: italic;
+}
+
+.saved-looks-header p {
+    max-width: 450px;
+
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.clear-looks-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 11px 16px;
+
+    border: 1px solid #ded2c7;
+
+    border-radius: 50px;
+
+    background: var(--white);
+
+    color: var(--muted);
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.clear-looks-button:hover {
+    border-color: var(--brown);
+
+    color: var(--brown);
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-looks {
+    max-width: 620px;
+
+    margin: 70px auto;
+
+    padding: 65px 35px;
+
+    text-align: center;
+
+    background: var(--white);
+
+    border: 1px dashed #d8cbc0;
+
+    border-radius: 30px;
+}
+
+.empty-looks-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+
+    color: var(--brown);
+}
+
+.empty-looks > span {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: var(--muted);
+}
+
+.empty-looks h2 {
+    margin-top: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+}
+
+.empty-looks p {
+    max-width: 410px;
+
+    margin: 12px auto 25px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.create-look-button,
+.make-look-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 12px 19px;
+
+    border-radius: 50px;
+
+    background: var(--brown);
+
+    color: var(--white);
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.create-look-button:hover,
+.make-look-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(74, 64, 56, 0.15);
+}
+
+
+/* =========================
+   COUNT
+========================= */
+
+.saved-count {
+    max-width: 1150px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: var(--muted);
+}
+
+
+/* =========================
+   LOOKS GRID
+========================= */
+
+.saved-looks-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.saved-look-card {
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--beige);
+
+    transition: 0.25s ease;
+}
+
+.saved-look-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(74, 64, 56, 0.1);
+}
+
+
+/* =========================
+   LOOK PREVIEW
+========================= */
+
+.saved-look-preview {
+    position: relative;
+
+    height: 330px;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    background: var(--cream);
+}
+
+.saved-piece {
+    position: absolute;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 20px rgba(74, 64, 56, 0.1);
+
+    background: var(--white);
+}
+
+.saved-piece img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* PIECE POSITIONS */
+
+.saved-top {
+    width: 125px;
+    height: 135px;
+
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-3deg);
+
+    background: var(--pink);
+}
+
+.saved-bottom {
+    width: 130px;
+    height: 125px;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(3deg);
+
+    background: var(--sage);
+}
+
+.saved-dress {
+    width: 150px;
+    height: 230px;
+
+    top: 30px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: var(--pink);
+}
+
+.saved-shoes {
+    width: 95px;
+    height: 75px;
+
+    bottom: 20px;
+    left: 30px;
+
+    background: var(--butter);
+
+    transform: rotate(-6deg);
+}
+
+.saved-accessory {
+    width: 85px;
+    height: 85px;
+
+    right: 25px;
+    top: 35px;
+
+    background: #e5dced;
+
+    transform: rotate(7deg);
+}
+
+
+/* DELETE */
+
+.delete-look {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: var(--muted);
+
+    transition: 0.2s ease;
+
+    z-index: 5;
+}
+
+.delete-look:hover {
+    background: var(--pink);
+
+    color: var(--brown);
+}
+
+
+/* =========================
+   LOOK INFO
+========================= */
+
+.saved-look-info {
+    padding: 18px 20px 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.saved-look-info > div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.saved-look-info span {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: var(--muted);
+}
+
+.saved-look-info h3 {
+    margin-top: 4px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+.saved-look-info > svg {
+    color: #b98d98;
+}
+
+
+/* =========================
+   ITEM TAGS
+========================= */
+
+.saved-look-items {
+    padding: 8px 20px 20px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+}
+
+.saved-look-items span {
+    padding: 6px 9px;
+
+    border-radius: 50px;
+
+    background: var(--cream);
+
+    color: var(--muted);
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   MORE LOOKS
+========================= */
+
+.more-looks {
+    max-width: 1150px;
+
+    margin: 55px auto 0;
+
+    padding: 28px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-radius: 24px;
+
+    background: var(--pink);
+}
+
+.more-looks > div > span {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: var(--muted);
+}
+
+.more-looks h2 {
+    margin-top: 5px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 26px;
+
+    font-weight: 500;
+}
+
+.more-looks h2 em {
+    color: #9d747f;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .saved-looks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .saved-looks-page {
+        padding: 55px 5% 80px;
+    }
+
+    .saved-looks-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .saved-looks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .saved-look-preview {
+        height: 350px;
+    }
+
+    .more-looks {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .make-look-button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .empty-looks {
+        padding: 50px 22px;
+    }
+
+    .saved-look-preview {
+        height: 320px;
+    }
+
+}

@@ -1,0 +1,1251 @@
+.dress-up-page {
+    min-height: calc(100vh - 82px);
+    padding: 65px 7% 90px;
+    background: var(--cream);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dress-up-header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.dress-label {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.dress-up-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 6vw, 78px);
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+.dress-up-header h1 em {
+    color: #a89588;
+    font-style: italic;
+}
+
+.dress-up-header p {
+    max-width: 470px;
+    margin-top: 17px;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.dress-actions {
+    display: flex;
+    gap: 9px;
+}
+
+.random-button,
+.reset-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 12px 17px;
+
+    border-radius: 50px;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.random-button {
+    border: none;
+    background: var(--brown);
+    color: var(--white);
+}
+
+.reset-button {
+    border: 1px solid var(--beige);
+    background: var(--white);
+    color: var(--brown);
+}
+
+.random-button:hover,
+.reset-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   STUDIO
+========================= */
+
+.dress-studio {
+    max-width: 1200px;
+    min-height: 650px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+
+    overflow: hidden;
+
+    border: 1px solid var(--beige);
+    border-radius: 32px;
+
+    background: var(--white);
+    box-shadow: 0 18px 50px rgba(74, 64, 56, 0.06);
+}
+
+
+/* =========================
+   DOLL PANEL
+========================= */
+
+.doll-panel {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--pink);
+}
+
+/* Circle removed */
+
+.doll-panel-decoration {
+    position: absolute;
+
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+
+    color: var(--brown);
+    opacity: 0.6;
+}
+
+.decoration-one {
+    top: 55px;
+    left: 55px;
+}
+
+.decoration-two {
+    right: 55px;
+    bottom: 70px;
+}
+
+
+/* =========================
+   DOLL
+========================= */
+
+.doll-stage {
+    position: relative;
+
+    z-index: 2;
+
+    width: 370px;
+    height: 550px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doll-character {
+    position: relative;
+
+    width: 300px;
+    height: 500px;
+}
+
+.doll-layer {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.doll-layer img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.doll-body-layer {
+    z-index: 1;
+}
+
+.doll-hair-layer {
+    z-index: 5;
+}
+
+
+/* =========================
+   DOLL CAPTION
+========================= */
+
+.doll-caption {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 9px 15px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   CLOTHING PANEL
+========================= */
+
+.clothing-panel {
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.clothing-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.clothing-panel-header > div span {
+    font-family: "Quicksand", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--muted);
+}
+
+.clothing-panel-header h2 {
+    margin-top: 5px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.clothing-panel-header h2 em {
+    color: #a89588;
+    font-style: italic;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.dress-categories {
+    display: flex;
+    gap: 6px;
+
+    margin-top: 28px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--beige);
+}
+
+.dress-categories button {
+    padding: 9px 13px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: transparent;
+    color: var(--muted);
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.dress-categories button:hover {
+    background: var(--cream);
+    color: var(--brown);
+}
+
+.dress-categories button.active {
+    background: var(--sage);
+    color: var(--brown);
+}
+
+
+/* =========================
+   CLOTHING ITEMS
+========================= */
+
+.dress-items {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+
+    margin-top: 22px;
+}
+
+.dress-item {
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    text-align: left;
+
+    transition: 0.25s ease;
+}
+
+.dress-item:hover {
+    transform: translateY(-4px);
+}
+
+.dress-item-image {
+    position: relative;
+
+    aspect-ratio: 0.9;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    background: var(--beige);
+}
+
+.dress-item-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.dress-item-image span {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 25px;
+    height: 25px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--brown);
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dress-item.selected .dress-item-image {
+    box-shadow:
+        0 0 0 3px var(--sage);
+}
+
+.dress-item p {
+    margin-top: 8px;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    color: var(--brown);
+}
+
+
+/* =========================
+   SAVE
+========================= */
+
+.save-look-button {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: var(--brown);
+    color: var(--white);
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.save-look-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   EMPTY DRESS UP
+========================= */
+
+.empty-dress-up {
+    max-width: 620px;
+    margin: 70px auto;
+
+    padding: 65px 35px;
+
+    text-align: center;
+
+    background: var(--white);
+
+    border: 1px dashed #d8cbc0;
+
+    border-radius: 30px;
+}
+
+.empty-dress-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+
+    color: var(--brown);
+}
+
+.empty-dress-up > span {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color: var(--muted);
+}
+
+.empty-dress-up h2 {
+    margin-top: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.empty-dress-up p {
+    max-width: 410px;
+
+    margin: 12px auto 25px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.go-to-closet,
+.category-closet-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 12px 19px;
+
+    border-radius: 50px;
+
+    background: var(--brown);
+
+    color: var(--white);
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.go-to-closet:hover,
+.category-closet-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(74, 64, 56, 0.12);
+}
+
+
+/* =========================
+   EMPTY CATEGORY
+========================= */
+
+.empty-dress-category {
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border: 1px dashed #d8cbc0;
+
+    border-radius: 22px;
+
+    background: #fffdf9;
+}
+
+.empty-category-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: var(--sage);
+
+    color: var(--brown);
+}
+
+.empty-dress-category > span {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color: var(--muted);
+}
+
+.empty-dress-category h3 {
+    margin-top: 7px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.empty-dress-category p {
+    max-width: 310px;
+
+    margin: 8px auto 18px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   USER CLOTHING IMAGES
+========================= */
+
+.dress-item-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--beige);
+}
+
+.dress-item-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.dress-item-image > span {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 25px;
+    height: 25px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--brown);
+
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   DOLL CLOTHING
+========================= */
+
+.doll-clothing-layer {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.doll-clothing-layer img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   EMPTY DOLL BODY
+========================= */
+
+.doll-body-placeholder {
+    width: 145px;
+    height: 285px;
+
+    position: relative;
+
+    border-radius: 70px 70px 35px 35px;
+
+    background: transparent;
+}
+
+
+/* =========================
+   SAVE LOOK MESSAGE
+========================= */
+
+.save-look-message {
+    margin-top: 10px;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    background: var(--cream);
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   VIEW SAVED LOOKS
+========================= */
+
+.view-saved-button {
+    width: 100%;
+
+    margin-top: 9px;
+
+    padding: 11px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid var(--beige);
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: var(--brown);
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.view-saved-button:hover {
+    background: var(--cream);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .dress-up-page {
+        padding: 50px 5% 70px;
+    }
+
+    .dress-up-header {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .dress-actions {
+        width: 100%;
+    }
+
+    .random-button,
+    .reset-button {
+        justify-content: center;
+    }
+
+    .dress-studio {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .doll-panel {
+        min-height: 580px;
+    }
+
+    .clothing-panel {
+        padding: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .dress-up-page {
+        min-height: calc(100vh - 70px);
+        padding: 40px 18px 60px;
+    }
+
+
+    /* HEADER */
+
+    .dress-up-header {
+        width: 100%;
+        margin-bottom: 25px;
+
+        gap: 22px;
+    }
+
+    .dress-label {
+        margin-bottom: 9px;
+        font-size: 11px;
+    }
+
+    .dress-up-header h1 {
+        font-size: clamp(45px, 14vw, 60px);
+        line-height: 0.95;
+    }
+
+    .dress-up-header p {
+        max-width: 100%;
+        margin-top: 14px;
+
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .dress-actions {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .random-button,
+    .reset-button {
+        width: 100%;
+
+        padding: 11px 12px;
+
+        justify-content: center;
+
+        font-size: 12px;
+    }
+
+
+    /* STUDIO */
+
+    .dress-studio {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        border-radius: 24px;
+    }
+
+
+    /* DOLL */
+
+    .doll-panel {
+        min-height: 500px;
+        height: 500px;
+    }
+
+    .doll-stage {
+        width: 100%;
+        height: 450px;
+
+        transform: scale(0.82);
+    }
+
+    .doll-character {
+        width: 300px;
+        height: 500px;
+    }
+
+    .doll-caption {
+        bottom: 15px;
+
+        padding: 8px 13px;
+
+        font-size: 11px;
+    }
+
+    .doll-panel-decoration {
+        font-size: 24px;
+    }
+
+    .decoration-one {
+        top: 30px;
+        left: 25px;
+    }
+
+    .decoration-two {
+        right: 25px;
+        bottom: 45px;
+    }
+
+
+    /* CLOTHING */
+
+    .clothing-panel {
+        padding: 28px 18px 25px;
+    }
+
+    .clothing-panel-header {
+        gap: 15px;
+    }
+
+    .clothing-panel-header h2 {
+        font-size: 29px;
+    }
+
+    .clothing-panel-header > div span {
+        font-size: 10px;
+    }
+
+
+    /* CATEGORIES */
+
+    .dress-categories {
+        margin-top: 22px;
+        padding-bottom: 12px;
+
+        overflow-x: auto;
+        flex-wrap: nowrap;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dress-categories::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dress-categories button {
+        flex-shrink: 0;
+
+        padding: 8px 12px;
+
+        font-size: 11px;
+    }
+
+
+    /* ITEMS */
+
+    .dress-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 11px;
+
+        margin-top: 18px;
+    }
+
+    .dress-item-image {
+        border-radius: 14px;
+    }
+
+    .dress-item-image span,
+    .dress-item-image > span {
+        top: 6px;
+        right: 6px;
+
+        width: 23px;
+        height: 23px;
+
+        font-size: 10px;
+    }
+
+    .dress-item p {
+        margin-top: 6px;
+
+        font-size: 10px;
+
+        line-height: 1.4;
+    }
+
+
+    /* SAVE */
+
+    .save-look-button {
+        margin-top: 20px;
+        padding: 13px;
+
+        font-size: 12px;
+    }
+
+    .view-saved-button {
+        padding: 10px 13px;
+
+        font-size: 11px;
+    }
+
+    .save-look-message {
+        font-size: 10px;
+    }
+
+
+    /* EMPTY CATEGORY */
+
+    .empty-dress-category {
+        min-height: 250px;
+
+        padding: 25px 15px;
+    }
+
+    .empty-category-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .empty-dress-category h3 {
+        font-size: 22px;
+    }
+
+    .empty-dress-category p {
+        max-width: 280px;
+
+        font-size: 11px;
+    }
+
+
+    /* EMPTY DRESS UP */
+
+    .empty-dress-up {
+        width: 100%;
+
+        margin: 45px auto;
+
+        padding: 45px 22px;
+
+        border-radius: 24px;
+    }
+
+    .empty-dress-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .empty-dress-up h2 {
+        font-size: 28px;
+    }
+
+    .empty-dress-up p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .go-to-closet,
+    .category-closet-button {
+        width: 100%;
+
+        padding: 12px 16px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .dress-up-page {
+        padding: 32px 14px 50px;
+    }
+
+
+    /* HEADER */
+
+    .dress-up-header {
+        gap: 18px;
+    }
+
+    .dress-label {
+        font-size: 10px;
+    }
+
+    .dress-up-header h1 {
+        font-size: 46px;
+    }
+
+    .dress-up-header p {
+        font-size: 12px;
+    }
+
+    .dress-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .random-button,
+    .reset-button {
+        padding: 11px;
+    }
+
+
+    /* DOLL */
+
+    .dress-studio {
+        border-radius: 20px;
+    }
+
+    .doll-panel {
+        min-height: 440px;
+        height: 440px;
+    }
+
+    .doll-stage {
+        height: 410px;
+
+        transform: scale(0.72);
+    }
+
+    .doll-caption {
+        bottom: 12px;
+
+        max-width: calc(100% - 30px);
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .doll-panel-decoration {
+        font-size: 21px;
+    }
+
+    .decoration-one {
+        top: 25px;
+        left: 20px;
+    }
+
+    .decoration-two {
+        right: 20px;
+        bottom: 35px;
+    }
+
+
+    /* CLOTHING */
+
+    .clothing-panel {
+        padding: 25px 14px 22px;
+    }
+
+    .clothing-panel-header h2 {
+        font-size: 26px;
+    }
+
+    .clothing-panel-header > div span {
+        font-size: 9px;
+    }
+
+
+    /* CATEGORIES */
+
+    .dress-categories {
+        margin-top: 18px;
+    }
+
+    .dress-categories button {
+        padding: 8px 11px;
+
+        font-size: 10px;
+    }
+
+
+    /* ITEMS */
+
+    .dress-items {
+        gap: 9px;
+    }
+
+    .dress-item-image {
+        border-radius: 12px;
+    }
+
+    .dress-item p {
+        font-size: 9px;
+    }
+
+
+    /* EMPTY */
+
+    .empty-dress-category {
+        min-height: 220px;
+
+        border-radius: 18px;
+    }
+
+    .empty-dress-up {
+        padding: 40px 18px;
+    }
+
+    .empty-dress-up h2 {
+        font-size: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .dress-up-page {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .dress-up-header h1 {
+        font-size: 41px;
+    }
+
+    .doll-panel {
+        min-height: 410px;
+        height: 410px;
+    }
+
+    .doll-stage {
+        transform: scale(0.65);
+    }
+
+    .clothing-panel {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .dress-items {
+        gap: 8px;
+    }
+
+}

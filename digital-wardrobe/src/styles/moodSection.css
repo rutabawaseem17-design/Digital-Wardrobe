@@ -1,0 +1,343 @@
+/* =========================
+   MOOD SECTION
+========================= */
+
+.mood-section {
+    padding: 100px 7%;
+    background: var(--white);
+}
+
+.mood-header {
+    max-width: 1150px;
+    margin: 0 auto 38px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.mood-header h2 {
+    margin-top: 8px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.mood-header h2 em {
+    color: #b98d98;
+    font-style: italic;
+}
+
+.mood-header p {
+    margin-top: 15px;
+
+    max-width: 430px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.section-label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.mood-selected-note {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    border-radius: 50px;
+
+    background: var(--cream);
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   MOOD GRID
+========================= */
+
+.mood-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.mood-card {
+    position: relative;
+
+    min-height: 220px;
+
+    padding: 22px;
+
+    border: 1px solid transparent;
+    border-radius: 24px;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.mood-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(74, 64, 56, 0.1);
+}
+
+.mood-card.selected {
+    border-color: var(--brown);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(74, 64, 56, 0.1);
+}
+
+
+/* CARD COLORS */
+
+.mood-pink {
+    background: #f6dde2;
+}
+
+.mood-butter {
+    background: #f4e7b2;
+}
+
+.mood-sage {
+    background: #c9d8c0;
+}
+
+.mood-lilac {
+    background: #e5dced;
+}
+
+.mood-brown {
+    background: #d9cbc0;
+}
+
+
+/* =========================
+   SYMBOLS
+========================= */
+
+.mood-symbols {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+}
+
+.mood-symbols span:nth-child(2) {
+    font-size: 14px;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.mood-card-content {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+}
+
+.mood-card-content > span {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    opacity: 0.6;
+}
+
+.mood-card h3 {
+    margin-top: 5px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.mood-arrow {
+    position: absolute;
+
+    right: 17px;
+    bottom: 17px;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    transition: 0.25s ease;
+}
+
+.mood-card:hover .mood-arrow {
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   SELECTED MOOD
+========================= */
+
+.selected-mood {
+    max-width: 1150px;
+    margin: 20px auto 0;
+
+    padding: 25px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    border-radius: 22px;
+
+    background: var(--cream);
+}
+
+.selected-mood-label {
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--muted);
+}
+
+.selected-mood h3 {
+    margin-top: 4px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.selected-mood h3 span {
+    color: #b98d98;
+}
+
+.selected-mood p {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.mood-style-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    padding: 12px 18px;
+
+    border-radius: 50px;
+
+    background: var(--brown);
+    color: var(--white);
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.mood-style-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 64, 56, 0.15);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+    .mood-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .mood-section {
+        padding: 75px 5%;
+    }
+
+    .mood-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .mood-selected-note {
+        display: none;
+    }
+
+    .mood-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mood-card {
+        min-height: 190px;
+    }
+
+    .selected-mood {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .mood-style-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .mood-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mood-card {
+        min-height: 160px;
+    }
+}
